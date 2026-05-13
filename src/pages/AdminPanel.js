@@ -3,10 +3,12 @@ import { db, auth } from '../firebase';
 import { ref, set } from 'firebase/database';
 import { signOut } from 'firebase/auth';
 import Login from './Login';
+import './AdminPanel.css';
 
 function AdminPanel() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [details, setDetails] = useState({
+    whatsapp:'',
     rent: '',
     advance: '',
     water: '',
@@ -36,18 +38,18 @@ function AdminPanel() {
   }
 
   return (
-    <div style={{ padding: '20px', maxWidth: '500px', margin: '0 auto' }}>
-      <h2>Admin Panel</h2>
-      <input name="rent" placeholder="Monthly Rent" onChange={handleChange} /><br/><br/>
-      <input name="advance" placeholder="Advance Amount" onChange={handleChange} /><br/><br/>
-      <input name="water" placeholder="Water Details" onChange={handleChange} /><br/><br/>
-      <input name="parking" placeholder="Parking Details" onChange={handleChange} /><br/><br/>
-      <input name="nearby" placeholder="Nearby Schools/Shops" onChange={handleChange} /><br/><br/>
-      <input name="contact" placeholder="Contact Number" onChange={handleChange} /><br/><br/>
-      <input name="location" placeholder="Google Maps Link" onChange={handleChange} /><br/><br/>
-      <button onClick={handleSave}>Save Details</button>
-      <br/><br/>
-      <button onClick={handleLogout}>Logout</button>
+    <div className="admin-container">
+      <h2>⚙️ Admin Panel</h2>
+      <input name="whatsapp" placeholder="WhatsApp Number (91XXXXXXXXXX)" onChange={handleChange} />
+      <input name="rent" placeholder="Monthly Rent" onChange={handleChange} />
+      <input name="advance" placeholder="Advance Amount" onChange={handleChange} />
+      <input name="water" placeholder="Water Details" onChange={handleChange} />
+      <input name="parking" placeholder="Parking Details" onChange={handleChange} />
+      <input name="nearby" placeholder="Nearby Schools/Shops" onChange={handleChange} />
+      <input name="contact" placeholder="Contact Number" onChange={handleChange} />
+      <input name="location" placeholder="Google Maps Link" onChange={handleChange} />
+      <button className="btn-save" onClick={handleSave}>Save Details</button>
+      <button className="btn-logout" onClick={handleLogout}>Logout</button>
     </div>
   );
 }
