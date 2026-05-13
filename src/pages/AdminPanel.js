@@ -40,7 +40,6 @@ function AdminPanel() {
   return (
     <div className="admin-container">
       <h2>⚙️ Admin Panel</h2>
-      <input name="whatsapp" placeholder="WhatsApp Number (91XXXXXXXXXX)" onChange={handleChange} />
       <input name="rent" placeholder="Monthly Rent" onChange={handleChange} />
       <input name="advance" placeholder="Advance Amount" onChange={handleChange} />
       <input name="water" placeholder="Water Details" onChange={handleChange} />

@@ -6,14 +6,14 @@ import './Login.css';
 function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       onLogin();
     } catch (err) {
-      setError('Invalid email or password');
+      alert('Invalid email or password! Please try again.');
     }
   };
 
@@ -26,13 +26,20 @@ function Login({ onLogin }) {
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <div className="password-wrapper">
+        <input
+          type={showPassword ? 'text' : 'password'}
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <span
+          className="eye-icon"
+          onClick={() => setShowPassword(!showPassword)}
+        >
+          {showPassword ? '🙈' : '👁️'}
+        </span>
+      </div>
       <button className="btn-login" onClick={handleLogin}>Login</button>
-      {error && <p className="error-msg">{error}</p>}
     </div>
   );
 }

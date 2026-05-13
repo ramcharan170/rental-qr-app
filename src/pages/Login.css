@@ -52,3 +52,22 @@
   font-size: 14px;
   margin-top: 12px;
 }
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}

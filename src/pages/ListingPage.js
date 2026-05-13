@@ -51,7 +51,7 @@ function ListingPage() {
         <a href={`tel:${details.contact}`} className="btn-call">
           📞 Call Now
         </a>
-        <a href={`https://wa.me/${details.whatsapp}`} className="btn-whatsapp">
+        <a href={`https://wa.me/${details.contact}`} className="btn-whatsapp">
             💬 WhatsApp
         </a>
         <a href={details.location} className="btn-maps">
