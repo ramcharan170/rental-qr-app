@@ -6,57 +6,60 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background: linear-gradient(135deg, #f5f7fa, #e8ecf1);
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 480px;
   margin: 30px auto;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .header h1 {
-  font-size: 26px;
+  font-size: 28px;
   color: #1a1a1a;
   font-weight: 700;
 }
 
 .header p {
-  color: #666;
+  color: #888;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .badge {
   display: inline-block;
   background: #e6f4ea;
   color: #2d7a3a;
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .details-card {
   background: #f9f9f9;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border: 1.5px solid #eeeeee;
 }
 
 .detail-row {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  align-items: center;
+  padding: 12px 0;
   border-bottom: 1px solid #eeeeee;
   font-size: 15px;
 }
@@ -72,57 +75,74 @@ body {
 
 .detail-value {
   color: #1a1a1a;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .btn-call {
   background: #1a73e8;
   color: white;
-  padding: 14px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-call:hover {
+  background: #1558b0;
 }
 
 .btn-whatsapp {
   background: #25d366;
   color: white;
-  padding: 14px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
 }
 
 .btn-maps {
   background: #f5f5f5;
   color: #1a1a1a;
-  padding: 14px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
+  transition: all 0.2s;
+}
+
+.btn-maps:hover {
+  background: #e8e8e8;
 }
 
 .qr-section {
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
 }
 
 .qr-section p {
   font-size: 13px;
-  color: #888;
+  color: #aaa;
   margin-top: 10px;
 }

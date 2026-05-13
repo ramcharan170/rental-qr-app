@@ -34,25 +34,17 @@ function ListingPage() {
           <span className="detail-value">₹{details.advance}</span>
         </div>
         <div className="detail-row">
-          <span className="detail-label">🚰 Water</span>
-          <span className="detail-value">{details.water}</span>
-        </div>
-        <div className="detail-row">
           <span className="detail-label">🚗 Parking</span>
           <span className="detail-value">{details.parking}</span>
-        </div>
-        <div className="detail-row">
-          <span className="detail-label">🏫 Nearby</span>
-          <span className="detail-value">{details.nearby}</span>
         </div>
       </div>
 
       <div className="buttons">
-        <a href={`tel:${details.contact}`} className="btn-call">
+        <a href={`tel:+${details.contact}`} className="btn-call">
           📞 Call Now
         </a>
         <a href={`https://wa.me/${details.contact}`} className="btn-whatsapp">
-            💬 WhatsApp
+          💬 WhatsApp
         </a>
         <a href={details.location} className="btn-maps">
           📍 View on Google Maps
