@@ -48,14 +48,18 @@ function AdminPanel() {
   return (
     <div className="admin-container">
       <h2>⚙️ Admin Panel</h2>
-      <input name="rent" placeholder="Monthly Rent" value={details.rent} onChange={handleChange} />
-      <input name="advance" placeholder="Advance Amount" value={details.advance} onChange={handleChange} />
-      <input name="water" placeholder="Water Details" value={details.water} onChange={handleChange} />
-      <input name="parking" placeholder="Parking Details" value={details.parking} onChange={handleChange} />
-      <input name="contact" placeholder="Contact Number (91XXXXXXXXXX)" value={details.contact} onChange={handleChange} />
-      <input name="location" placeholder="Google Maps Link" value={details.location} onChange={handleChange} />
-      <button className="btn-save" onClick={handleSave}>Save Details</button>
-      <button className="btn-logout" onClick={handleLogout}>Logout</button>
+      <label>Monthly Rent (₹)</label>
+      <input name="rent" placeholder="e.g. 8000" value={details.rent} onChange={handleChange} />
+      <label>Advance Amount (₹)</label>
+      <input name="advance" placeholder="e.g. 50000" value={details.advance} onChange={handleChange} />
+      <label>Parking</label>
+      <input name="parking" placeholder="e.g. 2 wheeler available" value={details.parking} onChange={handleChange} />
+      <label>Contact Number</label>
+      <input name="contact" placeholder="91XXXXXXXXXX" value={details.contact} onChange={handleChange} />
+      <label>Google Maps Link</label>
+      <input name="location" placeholder="Paste Google Maps link" value={details.location} onChange={handleChange} />
+      <button className="btn-save" onClick={handleSave}>💾 Save Details</button>
+      <button className="btn-logout" onClick={handleLogout}>🚪 Logout</button>
     </div>
   );
 }
